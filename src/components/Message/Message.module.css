@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+    padding: 15px;
+    background-color: aliceblue;
+    margin-bottom: 5px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-around;
+    min-height: 40px;
+
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.main_message {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.message {
+}
+
+.date {
+    float: bottom;
+}

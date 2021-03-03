@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login {
+    color: white;
+}
+
+.login_btn {
+    color: darkblue;
+    width: 70px;
+    height: 30px;
+    padding-left: 15px;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    cursor: pointer;
+}
