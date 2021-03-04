@@ -1,5 +1,7 @@
 import users from "../users";
 import {setMessagesFromLS} from "./workChatReducer";
+import {setFloodMessagesFromLS} from "./floodChatReducer";
+import {takeMessagesFromLS} from "../../components/helpers/helpers";
 
 const LOGIN = "LOGIN"
 const LOG_OUT = "LOG_OUT"
@@ -9,6 +11,7 @@ const initialState = {
         login: null,
         password: null,
         name: null,
+        nickname: null,
         avatar: null
     }
 }
@@ -17,7 +20,13 @@ const loginReducer = (state = initialState, action) => {
         case LOGIN:
             return {
                 ...state,
-                user: {login: action.login, password: action.password, name: action.name, avatar: action.avatar}
+                user: {
+                    login: action.login,
+                    password: action.password,
+                    name: action.name,
+                    nickname: action.nickname,
+                    avatar: action.avatar
+                }
             }
         case LOG_OUT:
             return {
@@ -29,7 +38,14 @@ const loginReducer = (state = initialState, action) => {
     }
 }
 
-export const loginAC = (login, password, name, avatar) => ({type: LOGIN, login, password, name, avatar})
+export const loginAC = (login, password, name, nickname, avatar) => ({
+    type: LOGIN,
+    login,
+    password,
+    name,
+    nickname,
+    avatar
+})
 export const logoutAC = () => ({type: LOG_OUT})
 
 export const loginThunk = (login, password) => {
@@ -37,14 +53,13 @@ export const loginThunk = (login, password) => {
         //поиск нужного пользователя в users.js
         USERS.forEach(u => {
             if (u.login === login && u.password === password) {
-                dispatch(loginAC(login, password, u.name, u.avatar))
+                //Логинизация
+                dispatch(loginAC(login, password, u.name, u.nickname, u.avatar))
                 //сохраняю юзера в стораж, чтобы использовать useEffect в appContainer
                 const user = getState().login.user
                 localStorage.setItem("user", JSON.stringify(user))
-                const workMessages = JSON.parse(localStorage.getItem('workMessages'))
-                if (!!workMessages) {
-                    dispatch(setMessagesFromLS(workMessages))
-                }
+                //собираю сообщения, если они есть
+                takeMessagesFromLS('workMessages', 'floodMessages', dispatch)
                 alert("Вы вошли!")
             }
         })

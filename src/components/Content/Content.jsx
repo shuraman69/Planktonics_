@@ -6,6 +6,7 @@ import Login from "../Login/Login";
 import HeaderContainer from "./Header/HeaderContainer";
 import ProfileContainer from "../Profile/ProfileContainer";
 import WorkChatContainer from "../WorkChat/WorkChatContainer";
+import FloodChatContainer from "../FloodChat/FloodChatContainer";
 
 const {Content} = Layout;
 const contentStyles = {
@@ -14,7 +15,7 @@ const contentStyles = {
     minHeight: 280,
 }
 
-function ContentFC() {
+function ContentFC({getChatData, actionId, setActionId}) {
     return (
         <Layout className="site-layout">
             <HeaderContainer/>
@@ -24,7 +25,12 @@ function ContentFC() {
             >
                 <Route path='/login' render={() => <Login/>}/>
                 <Route path='/profile' render={() => <ProfileContainer/>}/>
-                <Route path='/work-chat' render={() => <WorkChatContainer/>}/>
+                <Route path='/work-chat'
+                       render={() => <WorkChatContainer actionId={actionId}
+                                                        setActionId={setActionId} getChatData={getChatData}/>}/>
+                <Route path='/flood-chat'
+                       render={() => <FloodChatContainer actionId={actionId}
+                                                         setActionId={setActionId} getChatData={getChatData}/>}/>
             </Content>
         </Layout>
     );

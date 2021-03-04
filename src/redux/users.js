@@ -1,3 +1,8 @@
+import a3 from '../components/commons/avatars/3.jpg'
+import a2 from '../components/commons/avatars/2jpg.jpg'
+import a1 from '../components/commons/avatars/1jpg.jpg'
+import a4 from '../components/commons/avatars/4.jpg'
+
 const users = [
     {
         id: "0",
@@ -5,7 +10,7 @@ const users = [
         password: "111",
         name: 'Alex',
         nickname: 'gamer228',
-        avatar: 'https://i.pinimg.com/originals/39/69/5e/39695e35b889a3516dc7c33aa66d1df5.png'
+        avatar: a1
     },
     {
         id: "1",
@@ -13,7 +18,7 @@ const users = [
         password: "222",
         name: 'Dima',
         nickname: 'diman+100500',
-        avatar: 'https://slovami.net/wp-content/uploads/2018/04/11-27.jpg'
+        avatar: a4
     },
     {
         id: "2",
@@ -21,7 +26,7 @@ const users = [
         password: "333",
         name: 'Olga',
         nickname: 'i_like_cats',
-        avatar: 'https://n1s1.hsmedia.ru/ab/a1/af/aba1af5dc814b38752aa829ffc79fac8/620x462_1_0826e2e910d9c36df2ef409a75b591aa@1000x745_0xac120003_17550086621567090673.jpg'
+        avatar: a2
     },
     {
         id: "3",
@@ -29,7 +34,7 @@ const users = [
         password: "444",
         name: 'Elena',
         nickname: 'boomer69',
-        avatar: 'https://img06.rl0.ru/afisha/e1200x600i/daily.afisha.ru/uploads/images/a/76/a760fb29e0731bd291cce62d4eed2592.jpg'
+        avatar: a3
     }
 ]
 export default users

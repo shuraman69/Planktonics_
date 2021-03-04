@@ -1,37 +1,37 @@
 import WorkChat from "./WorkChat";
 import {sendMessageThunk} from "../../redux/reducers/workChatReducer";
-import {useDispatch, useSelector} from "react-redux";
-import {useState} from "react";
-import {useHistory} from "react-router";
+import {useEffect, useState} from "react";
 
-const WorkChatContainer = () => {
-    const history = useHistory()
-    const dispatch = useDispatch()
-    const login = useSelector(state => state.login.user.login)
-    const name = useSelector(state => state.login.user.name)
-    const avatar = useSelector(state => state.login.user.avatar)
-    const messagesOfWorkChat = useSelector(state => state.work.workChat)
+const WorkChatContainer = ({getChatData, deleteId, actionId, setActionId}) => {
     const [textAreaValue, setTextAreaValue] = useState()
-    if (!login) {
-        history.push('/login')
+    const workChatData = getChatData(true)
+    useEffect(() => {
+        setActionId(true)
+    }, [])
+    if (!workChatData.login) {
+        workChatData.history.push('/login')
     }
     const onTextAreaValueChange = (event) => {
         setTextAreaValue(event.target.value)
     }
     const sendMessage = () => {
-
         const message = {
             message: textAreaValue,
-            name,
-            avatar,
-            date: new Date().toLocaleTimeString()
+            name: workChatData.name,
+            avatar: workChatData.avatar,
+            date: new Date().toLocaleTimeString(),
+            id: Date.now()
         }
-        dispatch(sendMessageThunk(message))
+        workChatData.dispatch(sendMessageThunk(message))
     }
     return <WorkChat textAreaValue={textAreaValue}
                      onTextAreaValueChange={onTextAreaValueChange}
                      sendMessage={sendMessage}
-                     messagesOfWorkChat={messagesOfWorkChat}
+                     dispatch={workChatData.dispatch}
+                     messagesArray={workChatData.messagesArray}
+                     deleteId={deleteId}
+                     actionId={actionId}
+                     setVisible={workChatData.setVisible}
     />
 }
 export default WorkChatContainer

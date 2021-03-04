@@ -20,9 +20,12 @@
     margin-right: 10px;
 }
 
+
+
 .main_message {
     display: flex;
     flex-direction: column;
+    min-height: 100px;
 }
 
 .name {

@@ -6,9 +6,10 @@ import {logoutAC} from "../../../redux/reducers/loginReducer";
 
 function HeaderContainer() {
     const dispatch = useDispatch()
-    const login=useSelector(state=>state.login.user.login)
+    const login = useSelector(state => state.login.user.login)
     const logout = () => {
         dispatch(logoutAC())
+        localStorage.removeItem('user')
         alert("Вы вышли")
     }
     return (
