@@ -18,11 +18,11 @@ const FloodChat = ({
             <h2>Это не рабочий чат. Здесь вы можете общаться на нерабочие темы</h2>
             <div className={styles.chat_container}>
                 <div className={styles.chat_f}>
-                    {!!messagesArray ? messagesArray.map(m => <Message
+                    {!!messagesArray && messagesArray.map(m => <Message
                         onEditMessage={onEditMessage}
                         dispatch={dispatch}
                         actionId={actionId}
-                        m={m}/>) : "Сообщений нет"}
+                        m={m}/>)}
                 </div>
                 <Stickers sendSticker={sendSticker} stickers={stickers}/>
             </div>
