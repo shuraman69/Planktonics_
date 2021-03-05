@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/Planktonics_/static/css/main.4cc1897a.chunk.css",
+    "main.js": "/Planktonics_/static/js/main.db65195d.chunk.js",
+    "main.js.map": "/Planktonics_/static/js/main.db65195d.chunk.js.map",
+    "runtime-main.js": "/Planktonics_/static/js/runtime-main.a2563305.js",
+    "runtime-main.js.map": "/Planktonics_/static/js/runtime-main.a2563305.js.map",
+    "static/css/2.fc2db407.chunk.css": "/Planktonics_/static/css/2.fc2db407.chunk.css",
+    "static/js/2.0e0936e6.chunk.js": "/Planktonics_/static/js/2.0e0936e6.chunk.js",
+    "static/js/2.0e0936e6.chunk.js.map": "/Planktonics_/static/js/2.0e0936e6.chunk.js.map",
+    "static/js/3.43e30a19.chunk.js": "/Planktonics_/static/js/3.43e30a19.chunk.js",
+    "static/js/3.43e30a19.chunk.js.map": "/Planktonics_/static/js/3.43e30a19.chunk.js.map",
+    "index.html": "/Planktonics_/index.html",
+    "static/css/2.fc2db407.chunk.css.map": "/Planktonics_/static/css/2.fc2db407.chunk.css.map",
+    "static/css/main.4cc1897a.chunk.css.map": "/Planktonics_/static/css/main.4cc1897a.chunk.css.map",
+    "static/js/2.0e0936e6.chunk.js.LICENSE.txt": "/Planktonics_/static/js/2.0e0936e6.chunk.js.LICENSE.txt",
+    "static/media/1jpg.57048de4.jpg": "/Planktonics_/static/media/1jpg.57048de4.jpg",
+    "static/media/2jpg.e7dee65c.jpg": "/Planktonics_/static/media/2jpg.e7dee65c.jpg",
+    "static/media/3.3e818eb2.jpg": "/Planktonics_/static/media/3.3e818eb2.jpg",
+    "static/media/4.00df587e.jpg": "/Planktonics_/static/media/4.00df587e.jpg",
+    "static/media/st1.3d743afd.png": "/Planktonics_/static/media/st1.3d743afd.png",
+    "static/media/st2.50bb353e.png": "/Planktonics_/static/media/st2.50bb353e.png",
+    "static/media/st3.122d67dd.png": "/Planktonics_/static/media/st3.122d67dd.png",
+    "static/media/st4.f986eda0.png": "/Planktonics_/static/media/st4.f986eda0.png",
+    "static/media/st5.d5343850.png": "/Planktonics_/static/media/st5.d5343850.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a2563305.js",
+    "static/css/2.fc2db407.chunk.css",
+    "static/js/2.0e0936e6.chunk.js",
+    "static/css/main.4cc1897a.chunk.css",
+    "static/js/main.db65195d.chunk.js"
+  ]
+}
