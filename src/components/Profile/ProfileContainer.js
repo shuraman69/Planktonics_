@@ -13,4 +13,4 @@ const ProfileContainer = () => {
     }
     return <Profile avatar={avatar} nickname={nickname} userName={userName} login={login}/>
 }
-export default ProfileContainer
+export default ProfileContainer;
